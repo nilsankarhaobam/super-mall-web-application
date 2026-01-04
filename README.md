@@ -19,6 +19,22 @@ The Super Mall Web Application is a high-performance mall management system desi
 - Secure Firestore rules
 - Responsive UI
 
+## Create .env.local in the root and fill up the keys
+
+NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
+
+## Running the Project Locally
+
+npm install
+npm run dev
+
+
+
 ## System Architecture & Modules
 # 1. Authentication & Role Management
 RBAC (Role-Based Access Control): Custom ProtectedRoute component that intercepts unauthorized access and redirects based on user claims.
@@ -48,3 +64,4 @@ Hydration Synchronization: Fixed the "Cascading Render" error (setState within e
 # Data Integrity: Strict relational mapping where Products and Offers are tied to specific Shop and Category IDs.
 
 # User Engagement: Real-time visual feedback (badges, highlights, and animations) for a "Premium App" feel.
+
