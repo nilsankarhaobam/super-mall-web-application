@@ -57,12 +57,12 @@ Mall Analytics: Real-time "Bird-Eye" dashboard displaying live counts of Shops, 
 # 4. Technical Hurdles Solved
 Hydration Synchronization: Fixed the "Cascading Render" error (setState within effects) using requestAnimationFrame and isMounted patterns to bridge the gap between Server-Side Rendering and Browser LocalStorage.
 
-### Evaluation Metrics Implemented
-# React 19 Compliant: Zero console warnings for synchronous state updates in effects.
+## Evaluation Metrics Implemented
+React 19 Compliant: Zero console warnings for synchronous state updates in effects.
 
-# SSR Safe: Robust checks for window and localStorage to prevent hydration mismatches.
+SSR Safe: Robust checks for window and localStorage to prevent hydration mismatches.
 
-# Data Integrity: Strict relational mapping where Products and Offers are tied to specific Shop and Category IDs.
+Data Integrity: Strict relational mapping where Products and Offers are tied to specific Shop and Category IDs.
 
-# User Engagement: Real-time visual feedback (badges, highlights, and animations) for a "Premium App" feel.
+User Engagement: Real-time visual feedback (badges, highlights, and animations) for a "Premium App" feel.
 
