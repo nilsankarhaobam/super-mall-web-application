@@ -31,6 +31,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
 ## Running the Project Locally
 
 npm install
+
 npm run dev
 
 
