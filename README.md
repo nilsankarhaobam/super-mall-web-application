@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Super Mall Web Application
+## Developed by: H Nilsankar Singha
 
-## Getting Started
 
-First, run the development server:
+## Project Overview
+The Super Mall Web Application is a high-performance mall management system designed to digitize rural and developing markets. It provides a robust dual-interface for Administrators to control infrastructure and for Users to engage in a modern, data-driven shopping experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
+- Next.js (App Router)
+- Firebase (Auth, Firestore)
+- Tailwind CSS
+- DaisyUI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
+- User authentication
+- Product browsing
+- Admin dashboard
+- Product CRUD operations
+- Secure Firestore rules
+- Responsive UI
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## System Architecture & Modules
+# 1. Authentication & Role Management
+RBAC (Role-Based Access Control): Custom ProtectedRoute component that intercepts unauthorized access and redirects based on user claims.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Persistent Auth: Seamless integration of Firebase Auth state with Next.js middleware patterns.
 
-## Learn More
+# 2. The "Versus" Comparison Engine (Advanced Feature)
+Smart Selection: Interactive comparison slots allowing users to select products from different shops across the mall.
 
-To learn more about Next.js, take a look at the following resources:
+Best Price Algorithm: Implemented useMemo logic to automatically identify and highlight the "Best Deal" (lowest price) among compared items.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Global State Synchronization: Utilized a custom event-dispatching system to update the Navbar comparison badge in real-time without page refreshes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 3. Admin Inventory Control
+Consolidated Management: A unified product dashboard that filters inventory by Shop ID, allowing for instant CRUD operations (Add/Delete/View) in a single-page view.
 
-## Deploy on Vercel
+Mall Analytics: Real-time "Bird-Eye" dashboard displaying live counts of Shops, Categories, Products, and Active Offers.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 4. Technical Hurdles Solved
+Hydration Synchronization: Fixed the "Cascading Render" error (setState within effects) using requestAnimationFrame and isMounted patterns to bridge the gap between Server-Side Rendering and Browser LocalStorage.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Evaluation Metrics Implemented
+# React 19 Compliant: Zero console warnings for synchronous state updates in effects.
+
+# SSR Safe: Robust checks for window and localStorage to prevent hydration mismatches.
+
+# Data Integrity: Strict relational mapping where Products and Offers are tied to specific Shop and Category IDs.
+
+# User Engagement: Real-time visual feedback (badges, highlights, and animations) for a "Premium App" feel.
